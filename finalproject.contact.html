@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		      </script>
+		
+		      <script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+		      </script>
+				 
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  -->
+			
+		<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+		
+		<link rel="stylesheet" type="text/css" href="finalstyle.css">
+		
+		<title> Maya Fenter - Contact </title>
+		
+			
+		<style>
+			
+			h1 {
+				font-family: 'Caveat Brush';
+				font-size: 80pt;
+				text-align: center;
+				margin: 30px;
+			}
+			
+			h3 {
+				color: white;
+				text-align: center;
+				font-family: 'caveat brush';
+				font-size: 30pt;
+			}
+			
+			form {
+				text-align: center;
+				margin: 0 auto;
+				width: 50%;
+				background-color: black;
+				padding: 20px;
+			}
+			
+			form input {
+				margin: 15px;
+				width: 60%;
+				height: 20px;
+			}
+		
+			
+				
+			#message {
+				height: 100px;
+			}
+			
+			button {
+				background-color: black;
+				border: 2px solid white;
+				color: white;
+				font-family: 'quicksand';
+				
+			}
+			
+			button:hover {
+				cursor: pointer;
+			}
+			
+			.submit {
+				display: none;
+			}
+			
+			#thankyou {
+				background-color: black;
+				text-align: center;
+				margin: 0 auto;
+				padding: 20px;
+				display: none;
+				width: 50%;
+			}
+			
+			
+			
+			
+			
+		</style>
+		
+	
+	</head>
+	<body>
+		
+	<p id="header">MF </p>
+		
+	
+	
+	
+	<div id="nav">
+		<div id="ham">
+			<div class="menu"></div>
+			<div class="menu"></div>
+			<div class="menu"></div>
+		</div>
+		<div id="mainnav">
+		<ul class="mainnav">
+			<li><a href="finalproject.index.html">Home</a></li>
+			<li><a href="finalproject.about.html">About</a></li>
+			<li><a href="finalproject.contact.html">Contact</a></li>
+			<li class="hover"><a>Portfolio</a></li>
+			<div id="subnav">
+				<ul class="dropdown"> 
+					<li> <a href="finalproject.writing.html"> Writing </a></li>
+					<li> <a href="finalproject.video.html"> Video </a></li>
+				</ul>
+			</div> 
+		</ul>
+		</div>
+	</div>
+	
+	<h1> Don't be a stranger </h1>
+	<div id="clear">	
+		
+		
+		<div id="form">
+			<form>
+				<h3>Let's get in touch</h3>
+				<input type="text" placeholder="Your name"> <br>
+				<input type="text" placeholder="Your email"> <br>
+				<input type="text" placeholder="What's on your mind?" id="message"> <br> <br> 
+				<button function="onClick">Submit</button>
+			</form>
+		</div>
+	</div>
+	
+	<div id="thankyou">
+		<h3>Thank you for reaching out!</h3>
+	</div>
+		
+	<script>
+			
+		$(document).ready(function(){
+			
+			$("#ham").click(function(){
+				$("#mainnav").toggle("slide", 600);
+				$(".menu").show();
+			});
+			
+			$(".hover").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+			$("#subnav").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+			
+			$("form").hide(0).delay(300).fadeIn(3000);
+			
+			$("button").click(function(){
+				$("#clear").remove();
+				$("#thankyou").show();
+			});
+			
+
+		
+		});
+				
+			
+			
+	</script>
+		
+		
+	</body>
+	</html>

@@ -1,0 +1,94 @@
+#header {
+	font-family: 'Caveat Brush';
+	font-size: 30pt;
+	position: fixed;
+	top: -10px;
+	right: 30px;
+	float: right;
+	color: #cccccc;
+	
+}
+
+#ham {
+	margin-top: 10px;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	width: 35px;
+	position: fixed;
+	z-index: 101;
+	
+	
+}
+
+.menu {
+	width: 35px;
+	height: 5px;
+	background-color: #cccccc;
+	margin: 6px;
+	z-index: 1001;
+	
+}
+
+#ham:hover {
+	cursor: pointer;
+}
+
+
+
+#mainnav {
+
+	width: 15%;
+	padding: 5px;
+	height: 100%;
+	display: none;
+	background-color: #333333;
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	
+}
+
+.mainnav {
+	margin-top: 90px;
+}
+
+
+
+#nav li {
+	display: block;
+	font-family: 'Quicksand';
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 20px;
+	
+}
+
+#nav li a {
+	text-decoration: none;
+	color: white;
+}
+
+#nav li a:hover {
+	font-style: italic;
+	cursor: pointer;
+}
+
+
+
+
+.dropdown {
+	display: none;
+}
+
+.dropdown li {
+	display: block;
+}
+
+
+.Hover2 {
+	display: block;
+}
+
+

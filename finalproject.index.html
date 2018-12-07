@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		      </script>
+		
+		      <script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+		      </script>
+				 
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  -->
+			
+		<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Vidaloka' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Bentham' rel='stylesheet'>
+		
+		<link rel="stylesheet" type="text/css" href="finalstyle.css"> 
+		
+		<title>Maya Fenter </title>
+		
+			
+		<style>
+			
+			
+			#head1 {
+				position: absolute;
+				top: 160px;
+				left: 100px;
+				z-index: 2;
+			}
+			
+			#hello {
+				text-align: center;
+				position: relative;
+				top: 30px;
+				left: 145px;
+				font-family: 'Caveat Brush';
+				font-size: 80pt;
+				margin: 50px; 
+				z-index: 1;
+			}
+				
+			
+			#and {
+				position: relative;
+				top: 260px;
+				left: 550px;
+				font-family: 'Caveat Brush';
+				font-size: 60pt;
+				margin: 50px; 
+			}
+			
+			.white {
+				color: white;
+			}
+			
+			#photo1 img {
+				position: absolute;
+				top: 180px;
+				left: 100px;
+				height: 575px;
+				
+				z-index: 0;
+				margin-bottom: 30px;
+			}
+			
+			#head2 {
+				position: relative;
+				top: 700px;
+			}
+			
+			
+			#head2 img {
+				width: 700px;
+				margin-left: 200px;
+				z-index: -10;
+			}
+			
+			
+			.changeColor {
+				background-color: #ccffcc;
+			}
+			
+			body {
+				overflow-x: hidden;
+			}
+			
+			
+			
+		</style>
+		
+	
+	</head>
+	<body>
+		
+	<p id="header">MF </p>
+	<div id="nav">
+		<div id="ham">
+			<div class="menu"></div>
+			<div class="menu"></div>
+			<div class="menu"></div>
+		</div>
+		<div id="mainnav">
+		<ul class="mainnav">
+			<li><a href="finalproject.index.html">Home</a></li>
+			<li><a href="finalproject.about.html">About</a></li>
+			<li><a href="finalproject.contact.html">Contact</a></li>
+			<li class="hover"><a>Portfolio</a></li>
+			<div id="subnav">
+				<ul class="dropdown"> 
+					<li> <a href="finalproject.writing.html"> Writing </a></li>
+					<li> <a href="finalproject.video.html"> Video </a></li>
+				</ul>
+			</div> 
+		</ul>
+		</div>
+	</div>
+			
+	<div id="head1">
+		<h1 id="hello"> Hello, my name is Maya </h1>
+		<h1 id="and"> <span class="white">and I am </span> a storyteller </h1>
+	</div>
+	
+	
+	<div id="photo1">
+		<img src=photo1.jpg>
+	</div>
+	<!--
+	<div id="head2">
+		<img src=writingphoto.jpg>
+		<h1> A storyteller </h1>
+		<h2> infatuated with the world around me </h2>
+		<a href="finalproject.writing.html">Read my work</a>	
+	</div>
+	
+	<div id="head3">
+		<h1> A creator </h1>
+		<h2> with a passion for ... </h2>
+		<a href="finalproject.design.html">See what I can make</a>
+	</div>
+	
+	<div id="head4">
+		<h1> Curious </h1>
+		<h2> about what lies ahead </h2>
+		<a href="finalproject.contact.html">Get in touch</a>
+	</div>
+		-->
+		
+		
+	<script>
+			
+		$(document).ready(function(){
+			
+			$("#ham").click(function(){
+				$("#mainnav").toggle("slide", 600);
+				$(".menu").show();
+			});
+			
+			
+			$(".hover").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+			$("#subnav").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+			$(window).scroll(function(){
+				if ($(this).scrollTop() >600) {
+					$('body').addClass('changeColor')
+				}
+				if ($(this).scrollTop() <600) {
+					$('body').removeClass('changeColor')
+				}
+	          
+			});
+			
+			$("#head1").hide(0).delay(2000).fadeIn(3000);
+			$("#photo1").hide(0).delay(1000).fadeIn(3000);
+			
+
+		
+		});
+				
+			
+			
+	</script>
+		
+		
+	</body>
+	</html>
