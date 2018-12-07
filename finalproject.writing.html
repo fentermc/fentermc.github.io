@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		      </script>
+		
+		      <script type = "text/javascript" 
+		         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+		      </script>
+				 
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		  -->
+			
+		<link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Caveat Brush' rel='stylesheet'>
+		
+		<link rel="stylesheet" type="text/css" href="finalstyle.css">
+		
+		<title> Maya Fenter - Writing </title>
+		
+			
+		<style>
+			
+			h1 {
+				font-family: 'Caveat brush';
+				font-size: 80pt;
+				margin: 30px;
+				text-align: center;
+			}
+			
+			h2 {
+				font-family: 'Caveat Brush';
+				font-size: 30pt;
+				text-align: center;
+			}
+			
+			#body {
+				background-color: black;
+				color: white;
+				width: 60%;
+				margin: 0 auto;
+				padding: 20px;
+			}
+			
+			
+			#box {
+				background-color: white;
+				font-family: 'quicksand';
+				padding: 20px;
+				width: 40%;
+				text-align: center;
+				margin: 0 auto;
+				
+			}
+			
+			
+			
+			#stories a {
+				text-decoration: none;
+				font-family: 'quicksand';
+				height: 700px;
+				z-index: -1;
+				margin: 20px;
+				color: black;
+				
+			}
+			
+			#stories a:hover {
+				
+			}
+			
+			.effect {
+				font-style: italic;
+			}
+			
+			
+			
+		</style>
+		
+	
+	</head>
+	<body>
+		
+	<p id="header">MF </p>
+	<div id="nav">
+		<div id="ham">
+			<div class="menu"></div>
+			<div class="menu"></div>
+			<div class="menu"></div>
+		</div>
+		<div id="mainnav">
+		<ul class="mainnav">
+			<li><a href="finalproject.index.html">Home</a></li>
+			<li><a href="finalproject.about.html">About</a></li>
+			<li><a href="finalproject.contact.html">Contact</a></li>
+			<li class="hover"><a>Portfolio</a></li>
+			<div id="subnav">
+				<ul class="dropdown"> 
+					<li> <a href="finalproject.writing.html"> Writing </a></li>
+					<li> <a href="finalproject.video.html"> Video </a></li>
+				</ul>
+			</div> 
+		</ul>
+		</div>
+	</div>
+			
+		<h1> Everyone has a story to tell </h1>
+		
+		<div id="body">
+		
+			<h2> Here are some that I've told </h2>
+		
+			<div id="stories">
+				<div id="container">
+				<div id="box"><a href="http://magazine.miamistudent.net/on-the-outside-looking-in/">On the Outside Looking In</a></div> 
+				<div id="box"><a href="http://miamistudent.net/square-dancing-a-cornerstone-of-the-oxford-community/"> Squaredancing: A Cornerstone of the Oxford Community </a></div> 
+				<div id="box"><a href="http://miamistudent.net/panfest-feel-the-steel/" > Panfest: Feel the Steel </a></div> 
+				<div id="box"><a href="http://miamistudent.net/jake-davis-going-wherever-the-road-takes-him/"> Jake Davis: Going Wherever the Road Takes Him </a></div>  
+				<div id="box"><a href="http://miamistudent.net/world-hijab-day-uncovers-myths-about-women-who-choose-to-cover/"> World Hijab Day Uncovers Myths About Women Who Choose to Cover </a></div> 
+				<div id="box"><a href="http://miamistudent.net/rock-paper-scissors-die-the-making-of-a-mafia-short/"> 'Rock, Paper, Scissors, Die!': The Making of a MAFIA Short </a></div>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+		
+		
+		
+	<script>
+			
+		$(document).ready(function(){
+			
+			$("#ham").click(function(){
+				$("#mainnav").toggle("slide", 600);
+				$(".menu").show();
+			});
+			
+			$(".hover").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+			$("#subnav").hover(
+				function() { $(".dropdown").addClass("Hover2"); },
+		        function() { $(".dropdown").removeClass("Hover2"); }
+			);
+			
+		    
+			$("#body").hide(0).delay(300).fadeIn(3000);
+			
+			
+			$("a").hover(
+				function(){ $( this ).append( $( "<span> ***</span>" ) );
+				  }, function() {
+				    $( this ).find( "span:last" ).remove();
+			})
+			
+			
+
+		
+		});
+				
+			
+			
+	</script>
+		
+		
+	</body>
+	</html>
